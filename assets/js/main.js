@@ -12,67 +12,33 @@ menuLi.forEach(element => {
     })
 });
 
+function burgerMenu(selector) {
+  let menu = $(selector);
+  let button = menu.find('.burger-menu_button', '.burger-menu_lines');
+  let links = menu.find('.burger-menu_link');
+  let overlay = menu.find('.burger-menu_overlay');
+  
+  button.on('click', (e) => {
+    e.preventDefault();
+    toggleMenu();
+  });
+  
+  links.on('click', () => toggleMenu());
+  overlay.on('click', () => toggleMenu());
+  
+  function toggleMenu(){
+    menu.toggleClass('burger-menu_active');
+    
+    if (menu.hasClass('burger-menu_active')) {
+      $('body').css('overlow', 'hidden');
+    } else {
+      $('body').css('overlow', 'visible');
+    }
+  }
+}
 
-// import AirDatepicker from '../airdatepicker';
-// import '../airdatepicker/air-datepicker.css';
+burgerMenu('.burger-menu');
 
-// new AirDatepicker('#date', {
-//     isMobile: true,
-//     autoClose: true
-// });
-
-$(function(){
-    $('.slider').slick({
-        infinite: true,
-        autoplay:true, /* Автообновление картинок */
-        autoplaySpeed:2000, /* Скорость обновления картинок  */
-        slidesToShow:1,
-        dots:true,
-        arrow:true,
-
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-              }
-            },
-            {
-                breakpoint: 850,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true,
-                  arrow:false
-                }
-              },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll:1,
-                infinite:true,
-                dots:true,
-                arrow:false
-              }
-            },
-            {
-              breakpoint: 425,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrow:false
-              }
-            }
-        ]
-
-      })
-
-})
 
 
 // вкладки
@@ -94,3 +60,80 @@ for(let x = 0; x < buttons.length; x++){
         buttons[x].classList.add('button__active');
     })
 }
+
+
+// аккордион
+
+const buttonsEl = document.querySelectorAll('.button')
+const accordionsEl = document.querySelectorAll('.accordion')
+
+buttonsEl.forEach((button, index) => {
+
+    const accordion = accordionsEl[index]
+
+    button.addEventListener('click', () => {
+        accordion.classList.toggle('show')
+
+        if(accordion.classList.contains('show')) {
+            button.style.transform = 'rotate(90deg)'
+        } else {
+            button.style.transform = 'rotate(0)'
+        }
+    })
+
+})
+
+
+// слайдер
+$(function(){
+  $('.slider').slick({
+      infinite: true,
+      autoplay:true, /* Автообновление картинок */
+      autoplaySpeed:2000, /* Скорость обновления картинок  */
+      slidesToShow:1,
+      dots:true,
+      arrow:true,
+
+      responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            }
+          },
+          {
+              breakpoint: 850,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrow:false
+              }
+            },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll:1,
+              infinite:true,
+              dots:true,
+              arrow:false
+            }
+          },
+          {
+            breakpoint: 425,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrow:false
+            }
+          }
+      ]
+
+    })
+
+})

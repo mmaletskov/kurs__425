@@ -6,9 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kodchasan:wght@400;600&family=Montserrat+Alternates:wght@400;500&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="../airdatepicker/air-datepicker.css"> -->
         <link rel="stylesheet" href="../css/style.css">
-        <!-- <script type="module" src="../airdatepicker/air-datepicker.js" defer></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+        <script src="../slick/slick.min.js" defer></script>
         <script src="../js/main.js" defer></script>
         <title>elegance avenue</title>
     </head>
@@ -39,17 +39,16 @@
                     </li>
                 </ul>
                 
-                <div class="burger__wrapper">
-                    <div class="hamburger-menu">
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="#">школа моделей</a></li>
-                        <li><a href="#">курсы</a></li>
-                        <li><a href="#">войти</a></li>
-                    </ul>
+                <div class="burger-menu">
+                    <a href="" class="burger-menu_button">
+                      <spun class="burger-menu_lines"></spun>
+                    </a>
+                    <nav class="burger-menu_nav">
+                        <a href="#" class="burger-menu_link">школа моделей</a>
+                        <a href="./assets/incl/courses.html" class="burger-menu_link"">курсы</a>
+                        <a href="assets/incl/auth.html" class="burger-menu_link">войти</a>
+                    </nav>
+                    <div class="burger-menu_overlay"></div>
                 </div>
             </nav>
         </div>
@@ -108,60 +107,150 @@
     <section class="user__list">
         <div class="container">
             <div class="user__list-inner">
-                <h2 class="user__list-title">список пользователей</h2>
-                <form action="" class="form__search">
-                    <input class="search__input" type="search" placeholder="поиск">
-                </form>
+                <div class="user__list-title">
+                    <h2 class="list-title">список пользователей</h2>
+                    <button class="button"><img src="../images/admin/arrow-more.svg" alt=""></button>
+                
+                </div>
                 <div class="user__list-list">
-                    <div class="user__list-item">
-                        <div class="list__item-id">
-                            <h3 class="item__id">id: 1</h3>
-                        </div>
-                        <div class="list__item-name">
-                            <h3 class="item__name">Дмитрий Иванов</h3>
-                        </div>
-                        <div class="list__item-email">
-                            <h3 class="item__email">ivanovwq@gmail.com</h3>
-                        </div>
-                        <div class="list__item-delete">
-                            <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
-                        </div>
-                    </div>
 
-                    <div class="user__list-item">
-                        <div class="list__item-id">
-                            <h3 class="item__id">id: 1</h3>
-                        </div>
-                        <div class="list__item-name">
-                            <h3 class="item__name">Александра Птушкина</h3>
-                        </div>
-                        <div class="list__item-email">
-                            <h3 class="item__email">alexandrraprushkinaa@gmail.com</h3>
-                        </div>
-                        <div class="list__item-delete">
-                            <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
-                        </div>
-                    </div>
+                        <ul class="accordion">
 
-                    <div class="user__list-item">
-                        <div class="list__item-id">
-                            <h3 class="item__id">id: 1</h3>
-                        </div>
-                        <div class="list__item-name">
-                            <h3 class="item__name">Олег Заруцких</h3>
-                        </div>
-                        <div class="list__item-email">
-                            <h3 class="item__email">zaruckix@gmail.com</h3>
-                        </div>
-                        <div class="list__item-delete">
-                            <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
-                        </div>
-                    </div>
+                            <form action="" class="form__search">
+                                <input class="search__input" type="search" placeholder="поиск">
+                            </form>
+
+                            <div class="user__list-item">
+                                <div class="list__item-id">
+                                    <h3 class="item__id">id: 1</h3>
+                                </div>
+                                <div class="list__item-name">
+                                    <h3 class="item__name">Дмитрий Иванов</h3>
+                                </div>
+                                <div class="list__item-email">
+                                    <h3 class="item__email">ivanovwq@gmail.com</h3>
+                                </div>
+                                <div class="list__item-delete">
+                                    <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
+                                </div>
+                            </div>
+
+                            <div class="user__list-item">
+                                <div class="list__item-id">
+                                    <h3 class="item__id">id: 1</h3>
+                                </div>
+                                <div class="list__item-name">
+                                    <h3 class="item__name">Александра Птушкина</h3>
+                                </div>
+                                <div class="list__item-email">
+                                    <h3 class="item__email">alexandrraprushkinaa@gmail.com</h3>
+                                </div>
+                                <div class="list__item-delete">
+                                    <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
+                                </div>
+                            </div>
+
+                            <div class="user__list-item">
+                                <div class="list__item-id">
+                                    <h3 class="item__id">id: 1</h3>
+                                </div>
+                                <div class="list__item-name">
+                                    <h3 class="item__name">Олег Заруцких</h3>
+                                </div>
+                                <div class="list__item-email">
+                                    <h3 class="item__email">zaruckix@gmail.com</h3>
+                                </div>
+                                <div class="list__item-delete">
+                                    <a href="#"><img src="../images/admin/del.svg" alt="delete"></a>
+                                </div>
+                            </div>
+
+                        </ul>
                 </div>
             </div>
         </div>
     </section>
     <!-- user__list-end -->
+
+
+    <!-- applications -->
+    <section class="applications">
+        <div class="container">
+            <div class="applications__inner">
+                <h2 class="applications__title">заявки</h2>
+
+                <div class="application__nav">
+                    <a class="application__nav-link" href="#">новые</a>
+                    <a class="application__nav-link" href="#">в процессе</a>
+                    <a class="application__nav-link" href="#">отклоненные</a>
+                </div>
+
+                <div class="applicaton__user">
+                    <div class="application__user-item">
+                        <div class="user__item-id">
+                            <h3>id:1</h3>
+                        </div>
+                        <div class="user__item-name">
+                            <h3>Александр Александров</h3>
+                        </div>
+                        <div class="user__item-course">
+                            <h3>фотопозирование и визаж</h3>
+                        </div>
+                        <div class="user__item-btns">
+                            <a class="item__btns-confirm" href="#">принять</a>
+                            <a class="item__btns-discard" href="#">отклонить</a>
+                        </div>
+                    </div>
+
+                    <div class="application__user-item">
+                        <div class="user__item-id">
+                            <h3>id:1</h3>
+                        </div>
+                        <div class="user__item-name">
+                            <h3>Александр Александров</h3>
+                        </div>
+                        <div class="user__item-course">
+                            <h3>фотопозирование и визаж</h3>
+                        </div>
+                        <div class="user__item-btns">
+                            <a class="item__btns-confirm" href="#">принять</a>
+                            <a class="item__btns-discard" href="#">отклонить</a>
+                        </div>
+                    </div>
+
+                    <div class="application__user-item">
+                        <div class="user__item-id">
+                            <h3>id:1</h3>
+                        </div>
+                        <div class="user__item-name">
+                            <h3>Александр Александров</h3>
+                        </div>
+                        <div class="user__item-course">
+                            <h3>фотопозирование и визаж</h3>
+                        </div>
+                        <div class="user__item-btns">
+                            <a class="item__btns-confirm" href="#">принять</a>
+                            <a class="item__btns-discard" href="#">отклонить</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- applications-end -->
+
+
+    <!-- moderation__reviews -->
+    <section class="moderation__reviews">
+        <div class="container">
+            <div class="moderation__reviews-inner">
+                <h2 class="moderation__reviews-title">модерация отзывов</h2>
+            </div>
+        </div>
+    </section>
+    <!-- moderation__reviews-end -->
 </main>
 <!-- main-end -->
 
