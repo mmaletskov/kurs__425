@@ -1121,8 +1121,8 @@ legend {
 /* registration page-end */
 
 
-/* edit__course */
-/* registration page */
+
+/* edit__course page */
 .edit__course-inner{
     padding: 70px 0 100px 0;
 }
@@ -1177,8 +1177,6 @@ legend {
     background-color: white;
     color: #e85a50;
 }
-
-/* registration page-end */
 /* edit__course-end */
 
 
@@ -1255,6 +1253,63 @@ legend {
 }
 /* auth page-end */
 
+/* edit__profile page */
+
+.edit__profile-inner{
+    padding: 70px 0 100px 0;
+}
+.profile__inner-title{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 80px;
+    color: #54534A;
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+.form__edit{
+    max-width: 375px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.input__inner{
+    display: flex;
+    flex-direction: column;
+}
+.input__inner label{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 20px;
+    color: #858480;
+
+    padding: 10px 0 ;
+    text-align: left;
+}
+.input__inner input{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form__edit-btn{
+    background-color: #E85A50;  
+    padding: 20px 40px;
+    /* max-width: 200px; */
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: var(--monts);
+    font-size: 16px;
+    color: #fff;
+    transition: all .2s linear ;
+}
+.form__edit-btn:hover{
+    background-color: white;
+    color: #e85a50;
+}
+/* edit__profile-end */
 
 /* courses__card */
 .courses__card{
@@ -1551,6 +1606,15 @@ legend {
         display: flex;
         flex-direction: row;
     }
+    .profile__inner-title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 60px;
+        color: #54534A;
+        text-align: center;
+    
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width:426px){
@@ -1772,8 +1836,6 @@ legend {
         width: 40px;
     }
 
-
-
     .courses__inner-title {
         font-family: var(--monts);
         font-weight: 400;
@@ -1786,7 +1848,7 @@ legend {
     .registration__inner-title {
         font-family: var(--monts);
         font-weight: 400;
-        font-size: 45px;
+        font-size: 40px;
         color: #54534A;
         text-align: center;
         margin-bottom: 60px;
@@ -1794,7 +1856,7 @@ legend {
     .course__inner-title {
         font-family: var(--monts);
         font-weight: 400;
-        font-size: 45px;
+        font-size: 40px;
         color: #54534A;
         text-align: center;
         margin-bottom: 60px;
@@ -1840,6 +1902,25 @@ legend {
     }
     .exit__profile img{
         width: 40px;
+    }
+
+    .registration__inner-title {
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 35px;
+        color: #54534A;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .profile__inner-title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 35px;
+        color: #54534A;
+        text-align: center;
+    
+        margin-bottom: 60px;
     }
 }
 
@@ -1940,6 +2021,23 @@ legend {
     .descr__name{
         font-size: 24px;
     }
+    .registration__inner-title {
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 30px;
+        color: #54534A;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .profile__inner-title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 30px;
+        color: #54534A;
+        text-align: center;
+    
+        margin-bottom: 60px;
+    }
 }
 @media (max-width:320px) {
     .logo img{
@@ -1970,6 +2068,14 @@ legend {
         font-family: var(--monts);
         font-weight: 400;
         font-size: 35px;
+        color: #54534A;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .registration__inner-title {
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 25px;
         color: #54534A;
         text-align: center;
         margin-bottom: 60px;
