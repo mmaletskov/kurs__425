@@ -1786,6 +1786,12 @@ legend {
         justify-content: center;
         gap: 15px;
     }
+    .date__title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 28px;
+        color: #79776C;
+    }
 }
 
 @media (max-width:426px){
@@ -2436,6 +2442,12 @@ legend {
         background-color: #ffffff;
         padding: 20px 30px;
         max-width: 610px;
+    }
+    .date__title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 28px;
+        color: #79776C;
     }
 }
 @media (max-width:320px) {
