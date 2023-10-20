@@ -1792,6 +1792,22 @@ legend {
         font-size: 28px;
         color: #79776C;
     }
+    .form__sign-btn{
+        background-color: #E85A50;  
+        padding: 20px 40px;
+        /* max-width: 200px; */
+        margin: 30px auto;
+        text-align: center;
+        border-radius: 10px;
+        font-family: var(--monts);
+        font-size: 16px;
+        color: #fff;
+        transition: all .2s linear ;
+    }
+    .form__sign-btn:hover{
+        background-color: white;
+        color: #e85a50;
+    }
 }
 
 @media (max-width:426px){
@@ -2449,6 +2465,22 @@ legend {
         font-size: 28px;
         color: #79776C;
     }
+    .form__sign-btn{
+        background-color: #E85A50;  
+        padding: 20px 40px;
+        /* max-width: 200px; */
+        margin: 30px auto;
+        text-align: center;
+        border-radius: 10px;
+        font-family: var(--monts);
+        font-size: 16px;
+        color: #fff;
+        transition: all .2s linear ;
+    }
+    .form__sign-btn:hover{
+        background-color: white;
+        color: #e85a50;
+    }
 }
 @media (max-width:320px) {
     .logo img{
@@ -2608,5 +2640,26 @@ legend {
         background-color: #E85A50;
         text-align: center;
         border-radius: 10px;
+    }
+    .date__title{
+        font-family: var(--monts);
+        font-weight: 400;
+        font-size: 28px;
+    }
+    .form__sign-btn{
+        background-color: #E85A50;  
+        padding: 20px 40px;
+        /* max-width: 200px; */
+        margin: 30px auto;
+        text-align: center;
+        border-radius: 10px;
+        font-family: var(--monts);
+        font-size: 16px;
+        color: #fff;
+        transition: all .2s linear ;
+    }
+    .form__sign-btn:hover{
+        background-color: white;
+        color: #e85a50;
     }
 }
