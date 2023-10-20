@@ -23,10 +23,10 @@
             <nav class="nav">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="/main.html" class="menu__link">школа моделей</a>
+                        <a href="/index.html" class="menu__link">школа моделей</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">курсы</a>
+                        <a href="courses.html" class="menu__link">курсы</a>
                         <ul class="sub_menu">
                             <li class="sub_menu-item"><a class="sub_menu-link" href="">фотопозирование и визаж</a></li>
                             <li class="sub_menu-item"><a class="sub_menu-link" href="">актерское мастерство</a></li>
@@ -35,7 +35,7 @@
                         </ul>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">войти</a>
+                        <a href="auth.html" class="menu__link">войти</a>
                     </li>
                 </ul>
                 
@@ -44,9 +44,9 @@
                       <spun class="burger-menu_lines"></spun>
                     </a>
                     <nav class="burger-menu_nav">
-                        <a href="#" class="burger-menu_link">школа моделей</a>
-                        <a href="./assets/incl/courses.html" class="burger-menu_link"">курсы</a>
-                        <a href="assets/incl/auth.html" class="burger-menu_link">войти</a>
+                        <a href="/index.html" class="burger-menu_link">школа моделей</a>
+                        <a href="courses.html" class="burger-menu_link"">курсы</a>
+                        <a href="auth.html" class="burger-menu_link">войти</a>
                     </nav>
                     <div class="burger-menu_overlay"></div>
                 </div>
@@ -87,13 +87,13 @@
                         <h3 class="descr__menu-title">навигация:</h3>
                         <ul class="descr__menu-list">
                             <li class="descr__menu-item">
-                                <a href="#" class="descr__menu-link">список пользователей</a>
+                                <a href="#user__list" class="descr__menu-link">список пользователей</a>
                             </li>
                             <li class="descr__menu-item">
-                                <a href="#" class="descr__menu-link">заявки</a>
+                                <a href="#applications" class="descr__menu-link">заявки</a>
                             </li>
                             <li class="descr__menu-item">
-                                <a href="#" class="descr__menu-link">модерация отзывов</a>
+                                <a href="#moderation__reviews" class="descr__menu-link">модерация отзывов</a>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +104,7 @@
 
 
     <!-- user__list -->
-    <section class="user__list">
+    <section class="user__list" id="user__list">
         <div class="container">
             <div class="user__list-inner">
                 <div class="user__list-title">
@@ -174,7 +174,7 @@
 
 
     <!-- applications -->
-    <section class="applications">
+    <section class="applications" id="applications">
         <div class="container">
             <div class="applications__inner">
                 <h2 class="applications__title">заявки</h2>
@@ -243,10 +243,24 @@
 
 
     <!-- moderation__reviews -->
-    <section class="moderation__reviews">
+    <section class="moderation__reviews" id="moderation__reviews">
         <div class="container">
             <div class="moderation__reviews-inner">
                 <h2 class="moderation__reviews-title">модерация отзывов</h2>
+                <div class="moderation__reviews-list">
+                    <div class="moderation__reviews-item">
+                        <div class="reviews__item">
+                            <h3 class="reviews__item-name">Алия</h3>
+                            <h4 class="reviews__item-course">танцы Vogue</h4>
+                            <p class="reviews__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fugit obcaecati mollitia voluptatem nisi aperiam possimus sint veritatis, hic reprehenderit, sunt rerum alias impedit dolores assumenda. Neque aspernatur illo culpa?</p>
+                            <h4 class="reviews__item-date">22.09.23</h4>
+                        </div>
+                        <div class="reviews__btns">
+                            <a href="#" class="reviews__btns-publish">опубликовать</a>
+                            <a href="#" class="reviews__btns-discard">отклонить</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -6,9 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kodchasan:wght@400;600&family=Montserrat+Alternates:wght@400;500&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="../airdatepicker/air-datepicker.css"> -->
         <link rel="stylesheet" href="../css/style.css">
-        <!-- <script type="module" src="../airdatepicker/air-datepicker.js" defer></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+        <script src="../slick/slick.min.js" defer></script>
         <script src="../js/main.js" defer></script>
         <title>elegance avenue</title>
     </head>
@@ -44,7 +44,7 @@
                       <spun class="burger-menu_lines"></spun>
                     </a>
                     <nav class="burger-menu_nav">
-                        <a href="/index.html" class="burger-menu_link">школа моделей</a>
+                        <a href="#" class="burger-menu_link">школа моделей</a>
                         <a href="courses.html" class="burger-menu_link"">курсы</a>
                         <a href="auth.html" class="burger-menu_link">войти</a>
                     </nav>
@@ -58,42 +58,35 @@
 
 <!-- main -->   
 <main class="main">
-    <section class="auth">
+    <section class="sign__course">
         <div class="container">
-            <div class="auth__inner">
-                <h2 class="auth__inner-title">ВХОД</h2>
-                <form action="" class="form__auth">
+            <div class="sign__course-inner">
+                <h2 class="course__inner-title">ЗАПИСЬ НА КУРС</h2>
+                <form action="" class="form__sign">
                     <div class="input__inner">
                         <label for="">фамилия</label>
-                        <input type="text">
+                        <input type="text" placeholder="">
                     </div>
 
                     <div class="input__inner">
                         <label for="">имя</label>
-                        <input type="text">
+                        <input type="text" placeholder="">
                     </div>
 
                     <div class="input__inner">
                         <label for="">email</label>
-                        <input type="text">
+                        <input type="text" placeholder="">
                     </div>
 
                     
                     <div class="input__inner">
-                        <label for="">пароль</label>
-                        <input type="password">
+                        <label for="">номер телефона</label>
+                        <input type="text" placeholder="">
                     </div>
 
-                    
-                    <div class="input__inner">
-                        <label for="">подтверждение пароля</label>
-                        <input type="password">
-                    </div>
 
-                    <input class="form__auth-btn" type="button" value="отправить">
+                    <input class="form__sign-btn" type="button" value="отправить">
                 </form>
-
-                <p class="auth__inner-link">еще не зарегистрировались?пройдите регистрацию <a href="reg.html">здесь</a></p>
             </div>
         </div>
     </section>
@@ -105,7 +98,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__inner">
-            <div class="footer__inner-logo">
+            <div class="footer__inner-logo">    
                 <img src="../images/footer/logo-footer.svg" alt="elegance avenue">
             </div>
             <div class="footer__inner-designer">
