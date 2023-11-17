@@ -39,6 +39,13 @@ function burgerMenu(selector) {
 
 burgerMenu('.burger-menu');
 
+// const sett = document.querySelector('.setTimeout'); 
+
+// function sayHi() {
+//   sett.style.display = 'block';
+// }
+
+// setTimeout(sayHi, 1000);
 
 
 // вкладки
@@ -82,7 +89,27 @@ buttonsEl.forEach((button, index) => {
     })
 
 })
+// плавное появление текста в main
+document.addEventListener('DOMContentLoaded', () =>{
+  const blocks = document.querySelectorAll('.block')
+  const school__text = document.querySelector('.school__text')
 
+  window.addEventListener('scroll', () => {
+      const windowHeight = window.innerHeight
+
+      const scrollPosition = window.scrollY
+
+      const blokHeight = blocks[1].clientHeight
+
+      const blokMidlle = blocks[1].offsetTop + blokHeight / 2
+
+      if(scrollPosition + windowHeight >= blokMidlle){
+          school__text.style.display = 'block'
+      }else{
+          school__text.style.display = 'none'
+      }
+  })
+})
 
 // слайдер
 $(function(){
@@ -136,4 +163,5 @@ $(function(){
 
     })
 
-})
+}) 
+

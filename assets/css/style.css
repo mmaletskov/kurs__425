@@ -4,6 +4,7 @@
 	margin: 0px;
 	border: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 html{
     background-color: #EAE8DC;
@@ -68,7 +69,7 @@ input, textarea, button, select {
 	font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 input::-ms-clear {
@@ -78,8 +79,8 @@ input::-ms-clear {
 button, input[type="submit"] {
     display: inline-block;
     box-shadow: none;
-    background-color: transparent;
-    background: none;
+    /* background-color: transparent; */
+    /* background: none; */
     cursor: pointer;
 }
 
@@ -175,10 +176,10 @@ legend {
 .sub_menu{
     display: none;
     position: absolute;
-    left: -90px;
-    background-color:#BBAB94;
+    left: -30px;
+    /* top: 20px; */
+    background-color:#79776C;
     border-radius: 10px;
-    padding: 10px 10px;
 }
 .sub_menu-item{
     display: block;
@@ -188,7 +189,7 @@ legend {
     color: white;
 }
 .sub_menu-item:hover{
-    background-color: #a69885;
+    background-color: #b3a899;
 }
 .sub_menu-link{
     color: #ffffff;
@@ -338,7 +339,14 @@ legend {
     color: #E88073;
     text-align: center;
 
-    padding-bottom: 45px;
+    padding-bottom: 35px;
+}
+
+.edit__category{
+    font-family: var(--monts);
+    font-size: 16px;
+    color: #858480;
+    padding: 10px 0;
 }
 .models__tabs{
     margin-bottom: 60px;
@@ -346,9 +354,9 @@ legend {
 .tabs__header{
     display: flex;
     align-items: center;
-    padding: 60px 0;
+    padding: 50px 0;
     justify-content: center;
-    gap: 80px;
+    gap: 30px;
     font-family: var(--monts);
     font-weight: 500;
     color: #858480;
@@ -357,10 +365,15 @@ legend {
 .tabs__header-button{
     cursor: pointer;
     border-bottom: 1px solid transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 .tabs__header-button:hover{
-    border-bottom: 1px solid #858480;
+    /* border-bottom: 1px solid #858480; */
+    background-color: #54534A;
+    color: #EAE8DC;
 }
+
 
 .tabs__body{
     display: none;
@@ -405,14 +418,36 @@ legend {
 .about__school-inner{
     display: flex;
     align-items: center;
-    gap: 160px;
+    gap: 180px;
+    position: relative;
 }
 .school__img img{
     object-fit: cover;
+    height: 400px;
 }
 .school__text{
     max-width: 515px;
+    position: absolute;
+    right: 0;
 }
+.school__text{
+    max-width: 515px;
+    animation-duration: 2.2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-right: 200%;
+      width: 100%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+ 
 .school__text-title{
     font-family: var(--monts);
     font-weight: 500;
@@ -432,7 +467,106 @@ legend {
 }
 /* about__school-end */
 
+/* teachers */
+.teachers{
+    background-color: #54534A;
+    padding: 50px 0;
+
+}
+.teachers__inner-title{
+    font-family: var(--monts);
+    font-weight: 500;
+    font-size: 32px;
+    color: #EAE8DC;
+
+    padding-bottom: 50px;
+}
+.teachers__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+.teachers__item{
+    max-width: 250px;
+}
+.teachers__initials{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 0;
+}
+.teachers__item-name{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 22px;
+    color: #EAE8DC;
+}
+.teachers__item-surname{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 22px;
+    color: #EAE8DC;
+}
+.teachers__item-direction{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 14px;
+    color: #EAE8DC;
+
+    padding-bottom: 20px;
+}
+.teacher__inner-title{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 60px;
+    color: #54534A;
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+.edit__teacher-edit{
+    font-family: var(--monts);
+    font-weight: 500;
+    font-size: 16px;
+    color: #858480;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #EAE8DC;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+.edit__teacher-delete{
+    font-family: var(--monts);
+    font-weight: 500;
+    font-size: 16px;
+    color: #EAE8DC;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #E85A50;
+    text-align: center;
+}
+/* teachers-end */
+
 /* reviews */
+
+.setTimeout{
+    padding: 20px 40px;
+    background-color: #54534A;
+    z-index: 100;
+    display: none;
+}
+.active_set{
+    display: block;
+}
+.setTimeout__title{
+    font-family: var(--monts);
+    font-size: 22px;
+    color:white;
+}
+
 .reviews{
     padding: 50px 0;
 }
@@ -457,7 +591,7 @@ legend {
     border-radius: 10px;
     background-color: #ffffff;
     padding: 25px 70px;
-    margin: 0 10px;
+    height: 262px;
 }
 .slider__item-name{
     font-family: var(--monts);
@@ -466,7 +600,7 @@ legend {
     color: #858480;
 
     text-align: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .slider__item-course{
     font-family: var(--monts);
@@ -475,7 +609,7 @@ legend {
     color: #858480;
 
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 15px; */
 }
 .slider__item-text{
     font-family: var(--monts);
@@ -483,9 +617,14 @@ legend {
     font-size: 15px;
     color: #858480;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px 0;
+    height: 150px;
+    word-break: break-all;
 }
 .slider__item-date{
     font-family: var(--monts);
@@ -534,7 +673,7 @@ legend {
     font-weight: 400;
     font-size: 80px;
     color: #54534A;
-    padding: 70px 0 100px 0;
+    padding: 70px 0 70px 0;
     text-align: center;
 }
 .search input{
@@ -550,14 +689,18 @@ legend {
 }
 .courses__list{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+    position: relative;
 
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 }
 .courses__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     text-align: center;
     border-radius: 10px;
@@ -568,24 +711,30 @@ legend {
 .courses__item-descr{
     margin: 20px 0;
     /* background-color:aqua; */
-    height: 100px;
+    /* height: 100px; */
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* gap: 20px; */
+    justify-content: space-evenly;
+    gap: 7px;
 }
-.courses__item img{
+.courses__img{
     border-radius: 10px;
-    margin-top: -35px;
+    width: 156px;
+    margin: -35px auto 0 auto;
+    height: 217px;
+    object-fit: cover; 
+    /* height: 100%; */
 }
 .courses__name{
     font-family: var(--monts);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 17px;
     color: #858480;
-    max-width: 156px;
+    width: 180px;
+    margin: 0 auto 15px auto;
     text-align: center;
+    word-break:keep-all;
 }
 .courses__btn{
     padding: 15px 30px;
@@ -602,8 +751,102 @@ legend {
     color: #e85a50;
     border: 1px solid #e85a50;
 }
+.add__course-btn{
+  margin-bottom: 50px;
+}
+.delete__course{
+    text-align: center;
+    padding-bottom: 200px;
+}
+.delete__course-title{
+    font-family:var(--monts);
+    font-weight: 400;
+    font-size: 50px;
+    color: #54534A;
+    padding: 100px 0 100px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.delete__course-btns{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.delete__course-confirm {
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #79776C;
+    font-family: var(--monts);
+}
+.delete__course-discard {
+    padding: 20px 40px;
+    background-color: #E85A50;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: var(--monts);
+}
+.err__title{
+    font-family: var(--monts);
+    text-align:center;
+    color: #E85A50;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
 /* page courses-end */
 
+/* add__course */
+.add__course{
+    padding: 70px 0 100px 0;
+}
+.form__add{
+    max-width: 375px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.input__inner{
+    display: flex;
+    flex-direction: column;
+}
+.input__inner label{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 20px;
+    color: #858480;
+
+    padding: 10px 0 ;
+    text-align: left;
+}
+.input__inner input{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: var(--monts);
+}
+
+.form__add-btn{
+    background-color: #E85A50;  
+    padding: 20px 40px;
+    /* max-width: 200px; */
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: var(--monts);
+    font-size: 16px;
+    color: #fff;
+    transition: all .2s linear ;
+}
+.form__add-btn:hover{
+    background-color: white;
+    color: #e85a50;
+}
+/* add__course-end */
 
 /* profile */
 .user__info{
@@ -631,7 +874,8 @@ legend {
 .descr__img img{
     width: 252px;
     height: 252px;
-    border-radius: 130px;
+    border-radius: 130px; 
+    object-fit: cover;
 }
 .descr__name {
     font-family: var(--monts);
@@ -640,13 +884,24 @@ legend {
     color: #79776C;
     padding-bottom: 20px;
 }
-
+.descr__surname {
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 32px;
+    color: #79776C;
+    padding-bottom: 20px;
+}
 .descr__email {
     font-family: var(--monts);
     font-weight: 400;
     font-size: 24px;
     color: #79776C;
     text-align: left;
+}
+.descr__sn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .descr__btn{
     display: flex;
@@ -663,8 +918,8 @@ legend {
     color:#79776C;
     padding: 10px 10px;
     border-radius: 10px;
+    text-align: center;
 }
-
 
 .exit__profile{
     display: flex;
@@ -701,9 +956,21 @@ legend {
 }
 .courses__section-list{
     display: flex;
+    justify-content: center;    
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
+}
+.courses__item-prof{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-top: 40px;
+    height: 330px;
 }
 .courses__menu {
     font-family: var(--monts);
@@ -779,7 +1046,7 @@ legend {
 .descr__btn-admin{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 
     margin-top: 30px;
 }
@@ -817,7 +1084,9 @@ legend {
 .user__list{
     padding-bottom: 100px;
 }
-
+.button{
+    transition: all .2s linear;
+}
 .menus {
     display: flex;
     flex-direction: row;
@@ -899,14 +1168,21 @@ legend {
 }
 .form__search{
     max-width: 800px;
-    margin: 40px auto;
+    margin:auto auto 70px auto;
 }
 .search__input{
     padding: 10px;
     background-color: white;
     border-radius: 10px;
 }
-
+.search__input-btn{
+    background-color: #E85A50;
+    padding: 10px 20px;
+    color: white;
+    font-family: var(--monts);
+    font-size: 16px;
+    border-radius: 10px;
+}
 .search__input::placeholder{
     font-family: var(--monts);
     font-weight: 400;
@@ -927,6 +1203,8 @@ legend {
 }
 .list__item-name{
     width: 200px;
+    display: flex;
+    gap: 5px;
 }
 .list__item-email{
     width: 270px;
@@ -1017,6 +1295,9 @@ legend {
     font-size: 18px;
 }
 .user__item-name{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
     width: 320px;
     text-align: center;
 
@@ -1077,7 +1358,7 @@ legend {
     border-radius: 10px;
     background-color: #ffffff;
     padding: 25px 70px;
-    max-width: 610px;
+    width: 610px;
 }
 .reviews__item-name{
     font-family: var(--monts);
@@ -1104,7 +1385,7 @@ legend {
     color: #858480;
 
     line-height: 30px;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 40px;
 }
 .reviews__item-date{
@@ -1410,6 +1691,7 @@ legend {
     font-size: 60px;
     color: #54534A;
     text-align: center;
+    text-transform: uppercase;
 
     padding-bottom: 100px;
 }
@@ -1417,6 +1699,12 @@ legend {
     display: flex;
     justify-content: center;
     gap: 130px;
+}
+.card__descr-img img{
+    width: 315px;
+    height: 465px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .card__descr-text{
     max-width: 500px;
@@ -1467,10 +1755,22 @@ legend {
     font-size: 28px;
     color: #79776C;
 }
+.warning__title{
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 28px;
+    color: #79776C;
+
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
 .card__descr-btns{
     width: 100%;
     text-align: left;
     padding: 50px 0;
+}
+.card__descr-btn{
+    background-color: #333;
 }
 .card__descr-btn{
     display: inline-block;
@@ -1481,6 +1781,7 @@ legend {
     font-family: var(--monts);
     font-weight: 400;
     font-size: 20px;
+    text-align: center;
     transition: all .2s linear ;
 }
 .card__descr-btn:hover{
@@ -1491,6 +1792,16 @@ legend {
     width: 100%;
     text-align: center;
     padding-top: 100px;
+}
+.descr__reviews-date{
+    background-color: white;
+    width: 170px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 14px;
 }
 .descr__reviews-form{
     display: flex;
@@ -1508,12 +1819,30 @@ legend {
 
     padding-bottom: 20px;
 }
+.descr__reviews-btn{
+    display: inline-block;
+    padding: 20px 30px;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: #E85A50;
+    color: white;
+    border-radius: 10px;
+    font-family: var(--monts);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    transition: all .2s linear ;
+}
+.descr__reviews-btn:hover{
+    background-color: white;
+    color: #e85a50;
+}
 .descr__reviews-form textarea{
     background-color: white;
     border-radius: 10px;
     padding: 20px;
 }
-.descr__reviews-form input{
+/* .descr__reviews-form input{
     background-color: white;
     width: 170px;
     margin: 0 auto;
@@ -1522,7 +1851,7 @@ legend {
     font-family: var(--monts);
     font-weight: 400;
     font-size: 14px;
-}
+} */
 /* courses__card-end */
 
 
@@ -1542,6 +1871,10 @@ legend {
         background-color: #c3c0ae;
         padding: 10px 20px;
         border-radius: 10px;
+    }
+    .school__img img{
+        object-fit: cover;
+        height: 350px;
     }
 }
 
@@ -1602,6 +1935,10 @@ legend {
         line-height: 30px;
         color: #EAE8DC;
         text-align: justify;
+    }
+    .school__img img{
+        object-fit: cover;
+        height: 300px;
     }
     .slick-prev,
     .slick-next,
@@ -1781,6 +2118,12 @@ legend {
         color: #858480;
         border-radius: 10px;
     }
+    .application__nav-link:hover{
+        padding: 15px 30px;
+        background-color: white;
+        color: #858480;
+        border-radius: 10px;
+    }
     .moderation__reviews-item {
         display: flex;
         justify-content: center;
@@ -1807,6 +2150,12 @@ legend {
     .form__sign-btn:hover{
         background-color: white;
         color: #e85a50;
+    }
+
+    .teachers__list{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 }
 
@@ -1881,6 +2230,13 @@ legend {
         border-radius: 10px;
         border-bottom: 1px solid transparent;
     }
+    .tabs__header-button:hover{
+        padding: 15px 30px;
+        background-color: #858480;
+        color: white;
+        border-radius: 10px;
+        border-bottom: 1px solid transparent;
+    }
     .models__inner-title {
         font-family: var(--kod);
         font-weight: 600;
@@ -1918,9 +2274,9 @@ legend {
         align-items: center;
         gap: 50px;
     }
-    .school__text {
+    /* .school__text {
         max-width: 415px;
-    }
+    } */
     .school__text-title {
         font-family: var(--monts);
         font-weight: 500;
@@ -1938,6 +2294,14 @@ legend {
         text-align: justify;
     }
 
+    .about__school{
+        height: 720px;
+    }
+    .school__text {
+        max-width: 415px;
+        top: 350px;
+    }
+
     /* slider */
 .slider{
     display: flex;
@@ -1950,6 +2314,7 @@ legend {
     background-color: #ffffff;
     padding: 25px 40px;
     margin: 0 10px;
+    height: 100%;
 }
 .slider__item-name{
     font-family: var(--monts);
@@ -1976,7 +2341,7 @@ legend {
     color: #858480;
 
     line-height: 30px;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 40px;
 }
 .slider__item-date{
@@ -2230,6 +2595,13 @@ legend {
         text-align: center;
         border-radius: 10px;
     }
+    .courses__item {
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0 40px;
+        margin-top: 40px;
+    }
 }
 
 @media (max-width:376px){
@@ -2481,6 +2853,20 @@ legend {
         background-color: white;
         color: #e85a50;
     }
+    .tabs__header-button{
+        padding: 15px 20px;
+        background-color: #858480;
+        color: white;
+        border-radius: 10px;
+        border-bottom: 1px solid transparent;
+    }
+    .tabs__header-button:hover{
+        padding: 15px 20px;
+        background-color: #858480;
+        color: white;
+        border-radius: 10px;
+        border-bottom: 1px solid transparent;
+    }
 }
 @media (max-width:320px) {
     .logo img{
@@ -2518,7 +2904,7 @@ legend {
     .registration__inner-title {
         font-family: var(--monts);
         font-weight: 400;
-        font-size: 25px;
+        font-size: 35px;
         color: #54534A;
         text-align: center;
         margin-bottom: 60px;
@@ -2644,7 +3030,7 @@ legend {
     .date__title{
         font-family: var(--monts);
         font-weight: 400;
-        font-size: 28px;
+        font-size: 20px;
     }
     .form__sign-btn{
         background-color: #E85A50;  
